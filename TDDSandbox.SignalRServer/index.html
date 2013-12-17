@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SignalR HTML Client</title>
+    <script src="Scripts/jquery-1.6.4.js"></script>
+    <script src="Scripts/jquery.signalR-2.0.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function htmlEncode(value) {
+                return $("<div/>").text(value).html();
+            }
+            
+            function addMsg(msg) {
+                $("#chatWindow").append("<li>" + htmlEncode(msg) + "</li>");
+            }
+            
+            $("#join").click(function () {
+                var connection = $.connection("/chat", "name=" + $("#name").val(), true);
+
+                connection.url = "http://localhost:2039";
+                
+                connection.received(function (data) {
+                    addMsg(data);
+                });
+                connection.error(function (err) {
+                    addMsg("Error: " + err);
+                });
+
+                addMsg("Connecting...");
+                connection.start(function () {
+                    addMsg("Connected.");
+                    $("#sendButton").click(function () {
+                        connection.send($("#msg").val());
+                    });
+                });
+            });
+            
+            //var connection = $.hubConnection('http://localhost:2039/chat');
+
+            //var proxy = $.connection.chatHub || connection.chatHub;
+            //proxy.server.newChatMessage("html", $('#messageTextBox').val());
+            //proxy.client.addNewMessageToPage = function (name, message) {
+            //    // Add the message to the page. 
+            //    $('#chatWindow').append('<li><strong>' + htmlEncode(name)
+            //        + '</strong>: ' + htmlEncode(message) + '<li>');
+            //};
+        });
+    </script>
+</head>
+<body>
+    <textarea id="chatWindow" style="width:400px; height:200px"></textarea>
+    <div>
+        <span>Name:</span>
+        <input type="text" id="name"/>
+        <input type="button" value="Join" id="join" />
+    </div>
+    <div>
+        <span>Message:</span>
+        <input type="text" id="msg"/>
+        <button id="sendButton">Senc</button>
+    </div>
+</body>
+</html>

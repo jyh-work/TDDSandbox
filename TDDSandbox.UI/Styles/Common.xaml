@@ -1,0 +1,236 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="Bluish" Color="#27AAE1"/>
+    <SolidColorBrush x:Key="LighterGray" Color="#D1D3D4"/>
+    <SolidColorBrush x:Key="LightestGray" Color="#DADADA"/>
+    <SolidColorBrush x:Key="LightGray" Color="#A7A9AC"/>
+    <SolidColorBrush x:Key="LightestDemoGray" Color="#F1ECEC"/>
+    <SolidColorBrush x:Key="White" Color="White"/>
+    <SolidColorBrush x:Key="SelectedItemColor" Color="#E2F9FE"/>
+    
+    <!-- Borders -->
+    <Style x:Key="DefaultBorder" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="#D1D3D4"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="CornerRadius" Value="4,4,4,4"></Setter>
+    </Style>
+    
+    <!-- Font family -->
+    <Style x:Key="FontFamily">
+        <Setter Property="Control.FontFamily" Value="proxima-nova"></Setter>
+    </Style>
+    
+    <!-- Font sizes -->
+    <Style x:Key="Font14" BasedOn="{StaticResource FontFamily}">
+        <Setter Property="Control.FontSize" Value="14"></Setter>
+    </Style>
+    <Style x:Key="Font15" BasedOn="{StaticResource FontFamily}">
+        <Setter Property="Control.FontSize" Value="15"></Setter>
+    </Style>
+    <Style x:Key="Font18" BasedOn="{StaticResource FontFamily}">
+        <Setter Property="Control.FontSize" Value="18"></Setter>
+    </Style>
+    <Style x:Key="Font20" BasedOn="{StaticResource FontFamily}">
+        <Setter Property="Control.FontSize" Value="20"></Setter>
+    </Style>
+    <Style x:Key="Font24" BasedOn="{StaticResource FontFamily}">
+        <Setter Property="Control.FontSize" Value="24"></Setter>
+    </Style>
+
+    <!-- Fore color for font Size 14 -->
+    <Style x:Key="Font14LightestGray" BasedOn="{StaticResource Font14}">
+        <Setter Property="Control.Foreground" Value="#DADADA"></Setter>
+    </Style>
+    <Style x:Key="Font14LighterGray" BasedOn="{StaticResource Font14}">
+        <Setter Property="Control.Foreground" Value="#D1D3D4"></Setter>
+    </Style>
+    <Style x:Key="Font14LightGray" BasedOn="{StaticResource Font14}">
+        <Setter Property="Control.Foreground" Value="#A7A9AC"></Setter>
+    </Style>
+    <Style x:Key="Font14DarkGray" BasedOn="{StaticResource Font14}">
+        <Setter Property="Control.Foreground" Value="#58595B"></Setter>
+    </Style>
+
+    <!-- Fore color for font Size 15 -->
+    <Style x:Key="Font15LightestGray" BasedOn="{StaticResource Font15}">
+        <Setter Property="Control.Foreground" Value="#DADADA"></Setter>
+    </Style>
+    <Style x:Key="Font15LighterGray" BasedOn="{StaticResource Font15}">
+        <Setter Property="Control.Foreground" Value="#D1D3D4"></Setter>
+    </Style>
+    <Style x:Key="Font15LightGray" BasedOn="{StaticResource Font15}">
+        <Setter Property="Control.Foreground" Value="#A7A9AC"></Setter>
+    </Style>
+    <Style x:Key="Font15DarkGray" BasedOn="{StaticResource Font15}">
+        <Setter Property="Control.Foreground" Value="#58595B"></Setter>
+    </Style>
+    <Style x:Key="Font15White" BasedOn="{StaticResource Font15}">
+        <Setter Property="Control.Foreground" Value="White"></Setter>
+    </Style>
+    <Style x:Key="Font15Bluish" BasedOn="{StaticResource Font15}">
+        <Setter Property="Control.Foreground" Value="{StaticResource Bluish}"></Setter>
+    </Style>
+
+    <!-- Fore color for font Size 18 -->
+    <Style x:Key="Font18LightestGray" BasedOn="{StaticResource Font18}">
+        <Setter Property="Control.Foreground" Value="#DADADA"></Setter>
+    </Style>
+    <Style x:Key="Font18LighterGray" BasedOn="{StaticResource Font18}">
+        <Setter Property="Control.Foreground" Value="#D1D3D4"></Setter>
+    </Style>
+    <Style x:Key="Font18LightGray" BasedOn="{StaticResource Font18}">
+        <Setter Property="Control.Foreground" Value="#A7A9AC"></Setter>
+    </Style>
+    <Style x:Key="Font18DarkGray" BasedOn="{StaticResource Font18}">
+        <Setter Property="Control.Foreground" Value="#58595B"></Setter>
+    </Style>
+
+    <!-- Fore color for font Size 24 -->
+    <Style x:Key="Font24LightestGray" BasedOn="{StaticResource Font24}">
+        <Setter Property="Control.Foreground" Value="#DADADA"></Setter>
+    </Style>
+    <Style x:Key="Font24LighterGray" BasedOn="{StaticResource Font24}">
+        <Setter Property="Control.Foreground" Value="#D1D3D4"></Setter>
+    </Style>
+    <Style x:Key="Font24LightGray" BasedOn="{StaticResource Font24}">
+        <Setter Property="Control.Foreground" Value="#A7A9AC"></Setter>
+    </Style>
+    <Style x:Key="Font24DarkGray" BasedOn="{StaticResource Font24}">
+        <Setter Property="Control.Foreground" Value="#58595B"></Setter>
+    </Style>
+    <Style x:Key="Font24Bluish" BasedOn="{StaticResource Font24}">
+        <Setter Property="Control.Foreground" Value="#27AAE1"></Setter>
+    </Style>
+
+    <Style x:Key="Font20White" BasedOn="{StaticResource Font20}">
+        <Setter Property="Control.Foreground" Value="White"></Setter>
+    </Style>
+
+    <!-- Font weight for font Size 14 -->
+    <Style x:Key="Font14LightestGrayBold" BasedOn="{StaticResource Font14LightestGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font14LighterGrayBold" BasedOn="{StaticResource Font14LighterGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font14LightGrayBold" BasedOn="{StaticResource Font14LightGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font14DarkGrayBold" BasedOn="{StaticResource Font14DarkGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+
+    <!-- Font weight for font Size 15 -->
+    <Style x:Key="Font15LightestGrayBold" BasedOn="{StaticResource Font15LightestGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>    
+    <Style x:Key="Font15LighterGrayBold" BasedOn="{StaticResource Font15LighterGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font15LightGrayBold" BasedOn="{StaticResource Font15LightGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font15DarkGrayBold" BasedOn="{StaticResource Font15DarkGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font15DarkGraySemiBold" BasedOn="{StaticResource Font15DarkGray}">
+        <Setter Property="Control.FontWeight" Value="SemiBold"></Setter>
+    </Style>
+    <Style x:Key="Font15LightGraySemiBold" BasedOn="{StaticResource Font15LightGray}">
+        <Setter Property="Control.FontWeight" Value="SemiBold"></Setter>
+    </Style>
+    <Style x:Key="Font15WhiteSemiBold" BasedOn="{StaticResource Font15White}">
+        <Setter Property="Control.FontWeight" Value="SemiBold"></Setter>
+    </Style>
+    <Style x:Key="Font15BluishSemiBold" BasedOn="{StaticResource Font15Bluish}">
+        <Setter Property="Control.FontWeight" Value="SemiBold"></Setter>
+    </Style>
+    <Style x:Key="Font15BluishBold" BasedOn="{StaticResource Font15Bluish}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+
+    <!-- Font weight for font Size 18 -->
+    <Style x:Key="Font18LightestGrayBold" BasedOn="{StaticResource Font18LightestGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font18LighterGrayBold" BasedOn="{StaticResource Font18LighterGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font18LightGrayBold" BasedOn="{StaticResource Font18LightGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font18DarkGrayBold" BasedOn="{StaticResource Font18DarkGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+
+    <!-- Font weight for font Size 24 -->
+    <Style x:Key="Font24LightestGrayBold" BasedOn="{StaticResource Font24LightestGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font24LighterGrayBold" BasedOn="{StaticResource Font24LighterGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font24LightGrayBold" BasedOn="{StaticResource Font24LightGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font24DarkGrayBold" BasedOn="{StaticResource Font24DarkGray}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="Font24BluishBold" BasedOn="{StaticResource Font24Bluish}">
+        <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+    </Style>
+    
+    <!-- Placement -->
+    <Style x:Key="Centered">
+        <Setter Property="Control.VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Control.HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+    <Style x:Key="RightAligned">
+        <Setter Property="Control.VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Control.HorizontalAlignment" Value="Right"></Setter>
+    </Style>
+    <Style x:Key="LeftAligned">
+        <Setter Property="Control.VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Control.HorizontalAlignment" Value="Left"></Setter>
+    </Style>
+    
+    <!-- Margins -->
+    <!-- 20- -->
+    <Thickness x:Key="Right20" Left="0" Top="0" Right="20" Bottom="0"/>
+    <Thickness x:Key="Left20" Left="20" Top="0" Right="0" Bottom="0"/>
+    <Thickness x:Key="LeftRight20" Left="20" Top="0" Right="20" Bottom="0"/>
+    <Thickness x:Key="AllSides20" Left="20" Top="20" Right="20" Bottom="20"/>
+    <Thickness x:Key="AllSides10" Left="10" Top="10" Right="10" Bottom="10"/>
+
+    <!-- 15 -->
+    <Thickness x:Key="Left15" Left="15" Top="0" Right="0" Bottom="0"/>
+    <!-- 10 -->
+    <Thickness x:Key="Right10" Left="0" Top="0" Right="10" Bottom="0"/>
+    <Thickness x:Key="Left10" Left="10" Top="0" Right="0" Bottom="0"/>
+    <Thickness x:Key="Top10" Left="0" Top="10" Right="0" Bottom="0"/>
+    <Thickness x:Key="LeftRight10" Left="10" Top="0" Right="10" Bottom="0"/>
+    <Thickness x:Key="LeftTopBottom10" Left="10" Top="10" Right="0" Bottom="10"/>
+    <Thickness x:Key="LeftTop10" Left="10" Top="10" Right="0" Bottom="0"/>
+    <Thickness x:Key="TopBottom20" Left="0" Top="20" Right="0" Bottom="20"/>
+
+    <Thickness x:Key="Bottom1" Left="0" Top="0" Right="0" Bottom="1"/>
+    
+    <!-- Separator -->
+    <Style x:Key="Separator" TargetType="{x:Type TextBlock}">
+        <Setter Property="Width" Value="2"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Foreground" Value="#DADADA"></Setter>
+        <Setter Property="Margin" Value="{StaticResource Left20}"></Setter>
+    </Style>
+
+    <Style x:Key="DefaultButton" TargetType="{x:Type Button}" BasedOn="{StaticResource Font15WhiteSemiBold}">
+        <Setter Property="Background" Value="{StaticResource Bluish}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource Bluish}"></Setter>
+           </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
